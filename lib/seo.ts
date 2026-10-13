@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { CLINIC_INFO } from './clinic-data';
 
-export const BASE_URL = 'http://localhost:3456';
+export const BASE_URL = 'https://a-z-weld.vercel.app';
 
 export function createMetadata({
   title,
@@ -29,7 +29,7 @@ export function createMetadata({
       description,
       url,
       siteName: CLINIC_INFO.name,
-      locale: 'en_IE',
+    locale: 'pt_BR',
       type: 'website',
       images: [
         {
@@ -63,7 +63,7 @@ export function createMetadata({
 export function generateLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'RoofingContractor',
     '@id': `${BASE_URL}/#business`,
     name: CLINIC_INFO.name,
     legalName: CLINIC_INFO.legalName,
@@ -83,7 +83,7 @@ export function generateLocalBusinessSchema() {
       longitude: CLINIC_INFO.primaryLocation.coordinates.lng,
     } } : {}),
     openingHoursSpecification: CLINIC_INFO.schedule
-      .filter((item) => item.hours !== 'Closed')
+      .filter((item) => item.hours.includes('24 hours') || /\d{1,2}h[–-]\d{1,2}/.test(item.hours))
       .map((item) => {
         const isAllDay = item.hours.includes('24 hours');
         const range = item.hours.match(/(\d{1,2})h[–-](\d{1,2})/);
@@ -111,7 +111,7 @@ export function generateMedicalProcedureSchema(serviceName: string, description:
     '@type': 'Service',
     name: serviceName,
     description: description,
-    serviceType: 'Roof repair',
+    serviceType: 'Serviços de telhados e calhas',
     url: `${BASE_URL}${url}`,
     provider: {
       '@type': 'LocalBusiness',

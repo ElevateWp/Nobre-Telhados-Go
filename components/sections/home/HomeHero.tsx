@@ -102,7 +102,7 @@ export default function HomeHero() {
     };
   }, []);
 
-  const headline = 'Roofing in Dublin, built on care and experience.';
+  const headline = 'Reformas e cuidados para o seu telhado.';
   const headlineWords = headline.split(' ');
 
   return (
@@ -111,8 +111,8 @@ export default function HomeHero() {
       className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center bg-paper overflow-hidden py-12 sm:py-16 md:py-24"
     >
       <Image
-        src="/images/roof-saffron-walden-1024x768-1.jpg"
-        alt="Slate roof installation in progress"
+        src="/images/nobre-roof-06.jpg"
+        alt="Equipe Nobre Telhados Go trabalhando em um telhado"
         fill
         priority
         sizes="100vw"
@@ -129,15 +129,15 @@ export default function HomeHero() {
           <div className="lg:col-span-8 flex flex-col justify-center">
             {/* Semantic Single H1 */}
             <div className="flex items-center gap-3 mb-4 md:mb-5">
-              <span aria-hidden="true" className="h-px w-8 bg-[#E51B2B]" />
-              <span className="font-body text-[11px] text-[#6D696B] uppercase tracking-[0.14em]">
-                Dublin roofing specialists
+              <span aria-hidden="true" className="h-px w-8 bg-[#F5B800]" />
+              <span className="font-body text-[11px] text-[#6B7280] uppercase tracking-[0.14em]">
+                Nobre Telhados Go · Serviços para telhados
               </span>
             </div>
             <h1
               ref={h1Ref}
               aria-label={headline}
-              className="font-display text-[#1C1A1B] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
+              className="font-display text-[#202124] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
             >
               {headlineWords.map((word, idx) => (
                 <React.Fragment key={idx}>
@@ -146,7 +146,7 @@ export default function HomeHero() {
                       ref={(el) => {
                         if (el) wordsRef.current[idx] = el;
                       }}
-                      className={`inline-block will-change-transform ${['Roofing', 'care', 'experience.'].includes(word) ? 'text-[#E51B2B]' : ''}`}
+                      className={`inline-block will-change-transform ${['Reformas', 'telhado.'].includes(word) ? 'text-[#D99A00]' : ''}`}
                     >
                       {word}
                     </span>
@@ -162,33 +162,33 @@ export default function HomeHero() {
               ref={paraRef}
               className="font-body text-15 sm:text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8 md:mb-10 max-w-2xl"
             >
-              Our Dublin roofers bring over 10 years of experience to roof replacements, repairs and maintenance.
+              Reforma, reparo e limpeza de telhados e calhas. Atendimento ágil, cordial e pontual em Goiás.
             </p>
 
             <div
               ref={actionsRef}
               className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-8"
             >
-              <Button href="/book-appointment/" variant="forest" size="lg" className="w-full sm:w-auto font-medium">
-                Request a Quote
+              <Button href={`https://wa.me/${CLINIC_INFO.contact.whatsapp.replace(/[^0-9]/g, '')}`} variant="forest" size="lg" className="w-full sm:w-auto font-medium">
+                Pedir orçamento
               </Button>
               <Button
-                href={`tel:+35315563783`}
+                href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                 variant="ghost"
                 size="lg"
                 className="w-full sm:w-auto font-medium"
               >
-                Call {CLINIC_INFO.contact.phone}
+                Ligar: {CLINIC_INFO.contact.phone}
               </Button>
             </div>
 
             <div
               ref={locationRef}
-              className="font-body text-13 text-[#1C1A1B]/70 flex flex-wrap items-center gap-2"
+              className="font-body text-13 text-[#202124]/70 flex flex-wrap items-center gap-2"
             >
-              <span className="font-medium text-[#1C1A1B]">Open 24 hours</span>
+                <span className="font-medium text-[#202124]">Atendimento a partir das 6h30</span>
               <span className="hidden sm:inline">•</span>
-              <span>Dublin, Ireland</span>
+              <span>Goiás, Brasil</span>
               <span className="hidden sm:inline">•</span>
             </div>
           </div>
@@ -198,16 +198,16 @@ export default function HomeHero() {
             ref={infoRef}
             className="lg:col-span-4 lg:pl-4 flex flex-col justify-center"
           >
-            <div className="p-6 sm:p-8 bg-[#F7F7F7] border border-[#E2DFE0] shadow-sm flex flex-col space-y-4">
-              <span className="font-body text-13 text-[#1C1A1B] uppercase tracking-wider font-semibold">
-                Roof Replacements
+            <div className="p-6 sm:p-8 bg-[#F5F7FA] border border-[#E1E5EA] shadow-sm flex flex-col space-y-4">
+              <span className="font-body text-13 text-[#202124] uppercase tracking-wider font-semibold">
+              Especialistas em telhados
               </span>
-              <p className="font-body text-13 sm:text-15 text-[#1C1A1B]/90 leading-relaxed">
-                <strong className="text-[#1C1A1B] font-semibold">CJ Roofing Services Ltd</strong> &mdash; trusted roof replacements across Dublin.
+              <p className="font-body text-13 sm:text-15 text-[#202124]/90 leading-relaxed">
+                <strong className="text-[#202124] font-semibold">Nobre Telhados Go</strong> &mdash; reformas, reparos e limpeza de telhados e calhas.
               </p>
-              <div className="pt-3 border-t border-[#E2DFE0] flex items-center justify-between text-13 font-body text-[#1C1A1B]/70">
-                <span>Here when you need us</span>
-                <span className="text-[#1C1A1B] font-semibold">Open 24 hours</span>
+              <div className="pt-3 border-t border-[#E1E5EA] flex items-center justify-between text-13 font-body text-[#202124]/70">
+                <span>Telefone</span>
+                <span className="text-[#202124] font-semibold">{CLINIC_INFO.contact.phone}</span>
               </div>
             </div>
           </div>

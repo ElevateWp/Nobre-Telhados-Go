@@ -57,38 +57,32 @@ export interface ClinicInformation {
 }
 
 export const CLINIC_INFO: ClinicInformation = {
-  name: 'CJ Roofing Services Ltd',
-  legalName: 'CJ Roofing Services Ltd',
-  tagline: 'Reliable roofing work, delivered with care.',
+  name: 'Nobre Telhados Go',
+  legalName: 'Nobre Telhados Go',
+  tagline: 'Reformas e cuidados para o seu telhado.',
   primaryLocation: {
     street: '',
     suite: '',
-    city: 'Dublin',
-    state: '',
+    city: '',
+    state: 'Goiás',
     postalCode: '',
-    country: 'Ireland',
-    directions: 'Dublin, Ireland',
-    landmarks: 'Serving Dublin and surrounding areas',
+    country: 'BR',
+    directions: 'Atendimento em Goiás. Consulte a equipe sobre a disponibilidade na sua região.',
+    landmarks: '',
   },
   contact: {
-    phone: '+353 1 556 3783',
-    emergencyPhone: '+353 1 556 3783',
-    whatsapp: '+353 1 556 3783',
+    phone: '+55 62 99465-3540',
+    emergencyPhone: '+55 62 99465-3540',
+    whatsapp: '+55 62 99465-3540',
     email: '',
   },
-  identityHighlights: ['Over 10 years of roofing experience', 'Residential roofing across Dublin'],
+  identityHighlights: ['Reformas de telhados', 'Limpeza de telhados e calhas', 'Reparos'],
   schedule: [
-    { day: 'Monday', hours: 'Open 24 hours' },
-    { day: 'Tuesday', hours: 'Open 24 hours' },
-    { day: 'Wednesday', hours: 'Open 24 hours' },
-    { day: 'Thursday', hours: 'Open 24 hours' },
-    { day: 'Friday', hours: 'Open 24 hours' },
-    { day: 'Saturday', hours: 'Open 24 hours' },
-    { day: 'Sunday', hours: 'Open 24 hours' },
+    { day: 'Atendimento', hours: 'A partir das 6h30 · confirme por telefone' },
   ],
   verifiedStats: [
-    { value: 4, suffix: '.7', label: 'Google rating', description: 'Based on 83 Google reviews.' },
-    { value: 83, suffix: '', label: 'Google reviews', description: 'Customer reviews shown on Google.' },
+    { value: 5, suffix: '.0', label: 'Nota no Google', description: 'Nota informada no perfil do Google.' },
+    { value: 6, suffix: '', label: 'Avaliações no Google', description: 'Avaliações informadas no perfil do Google.' },
   ],
   accreditations: [],
 };
@@ -97,39 +91,59 @@ export const DENTISTS: DentistProfile[] = [
   {
     id: 'roofing-team',
     slug: 'our-doctor',
-    name: 'Chris and the CJ Roofing team',
-    title: 'Dublin roofing specialists',
-    qualifications: 'Residential roofing',
-    specialization: 'Roof replacements, repairs and maintenance',
-    experienceYears: 10,
-    bio: 'Our Dublin roofing team brings over 10 years of experience to roof replacements and residential roofing work.',
-    philosophy: 'We take care of each property, explain the work clearly and aim to leave every roof strong and reliable.',
+    name: 'Equipe Nobre Telhados Go',
+    title: 'Empresa de serviços para telhados',
+    qualifications: 'Atendimento em Goiás',
+    specialization: 'Reformas, reparos e limpeza de telhados',
+    experienceYears: 0,
+    bio: 'Serviços profissionais para telhados, incluindo reformas, reparos e limpeza de telhados e calhas.',
+    philosophy: 'Atendimento ágil, cordial e pontual, com orçamento antes da execução do serviço.',
     education: [],
     memberships: [],
-    specialties: ['Roof replacement', 'Flat roofs', 'Roof repairs', 'Gutters and fascias'],
-    image: '/images/Michael.jpg',
-    warmImage: '/images/roof-saffron-walden-1024x768-1.jpg',
+    specialties: ['Reforma de telhados', 'Limpeza de telhados', 'Limpeza de calhas', 'Reparos'],
+    image: '/images/nobre-roof-06.jpg',
+    warmImage: '/images/nobre-roof-06.jpg',
+  },
+];
+
+export interface CustomerTestimonial {
+  name: string;
+  rating: number;
+  quote: string;
+  age: string;
+  source: string;
+}
+
+// Keep this to the positive review text supplied by the business owner.
+export const TESTIMONIALS: CustomerTestimonial[] = [
+  {
+    name: 'Evandro Stanger',
+    rating: 5,
+    quote: 'Excelente profissional. Serviço rápido, atencioso e muito pontual. Depois do orçamento, o serviço foi realizado rapidamente. Recomendo a todos.',
+    age: 'há 2 meses',
+    source: 'Avaliação no Google',
+  },
+  {
+    name: 'Leonardo Costa Borges',
+    rating: 5,
+    quote: 'Liguei para fazer uma limpeza geral no telhado e nas calhas. Resolveram meu problema.',
+    age: 'há 1 mês',
+    source: 'Avaliação no Google',
+  },
+  {
+    name: 'werk dresdean',
+    rating: 5,
+    quote: 'Excelente profissional, cumpriu o prazo. Recomendo.',
+    age: 'há 1 mês',
+    source: 'Avaliação no Google',
   },
 ];
 
 const projectPhotos = [
-  '/images/roof-saffron-walden-1024x768-1.jpg',
-  '/images/roofb3-1.jpg',
-  '/images/Michael.jpg',
-  '/images/m9.jpg',
-  '/images/m8.jpg',
-  '/images/m7.jpg',
-  '/images/m6.jpg',
-  '/images/m5.jpg',
-  '/images/m4.jpg',
-  '/images/m3.jpg',
-  '/images/m2.jpg',
-  '/images/IMG-20181001-WA0056.jpg',
-  '/images/IMG-20181001-WA0042.jpg',
-  '/images/IMG-20181001-WA0032.jpg',
-  '/images/IMG-20181001-WA0014.jpg',
-  '/images/caslast.jpg',
-  '/images/cas4.jpg',
+  '/images/nobre-roof-01.jpg', '/images/nobre-roof-02.jpg', '/images/nobre-roof-03.jpg',
+  '/images/nobre-roof-04.jpg', '/images/nobre-roof-05.jpg', '/images/nobre-roof-06.jpg',
+  '/images/nobre-roof-07.jpg', '/images/nobre-roof-08.jpg', '/images/nobre-roof-09.jpg',
+  '/images/nobre-roof-10.jpg', '/images/nobre-roof-11.png',
 ];
 
 const makeService = (
@@ -151,27 +165,27 @@ const makeService = (
   clinicalExplanation: description,
   whoNeeds: problems,
   benefits,
-  indications: problems.map((condition) => ({ condition, explanation: `Our team can inspect the roof and explain the options for ${condition.toLowerCase()}.` })),
+  indications: problems.map((condition) => ({ condition, explanation: 'Esse sinal merece uma avaliação profissional para entender a origem, as condições do telhado e as opções adequadas para o imóvel.' })),
   procedureSteps: [
-    { stepNumber: 1, title: 'Roof inspection', duration: 'By appointment', description: 'We assess the roof and note visible areas that need attention.', clinicalDetails: 'The inspection helps define the right scope for the property.' },
-    { stepNumber: 2, title: 'Clear proposal', duration: 'After inspection', description: 'We explain the recommended work and materials before starting.', clinicalDetails: 'Price and timing are confirmed once the work is assessed.' },
-    { stepNumber: 3, title: 'Roofing work', duration: 'As agreed', description: 'Our team completes the agreed work with care for your property.', clinicalDetails: 'Access and safety arrangements are agreed in advance.' },
-    { stepNumber: 4, title: 'Final review', duration: 'At completion', description: 'We review the completed work and share any relevant maintenance guidance.', clinicalDetails: 'The final scope reflects the work agreed with you.' },
+    { stepNumber: 1, title: 'Avaliação do telhado', duration: 'Com agendamento', description: 'A equipe avalia o telhado e identifica os pontos que precisam de atenção.', clinicalDetails: 'A avaliação ajuda a definir o serviço adequado para o imóvel.' },
+    { stepNumber: 2, title: 'Orçamento claro', duration: 'Após a avaliação', description: 'O serviço recomendado e os custos são explicados antes do início.', clinicalDetails: 'Prazo e valor são confirmados de acordo com o trabalho necessário.' },
+    { stepNumber: 3, title: 'Execução do serviço', duration: 'Conforme combinado', description: 'A equipe realiza o serviço combinado com cuidado pelo imóvel.', clinicalDetails: 'O acesso e os cuidados de segurança são acertados antes.' },
+    { stepNumber: 4, title: 'Revisão final', duration: 'Ao concluir', description: 'A equipe revisa o trabalho e compartilha orientações de manutenção.', clinicalDetails: 'A conclusão segue o escopo combinado com você.' },
   ],
   recoveryTimeline: [
-    { period: 'Before work begins', expectedSensations: 'We assess the roof and agree the scope with you.', careProtocol: 'Share any photos and describe when the issue occurs.' },
-    { period: 'During the work', expectedSensations: 'Timing depends on access, materials and the work involved.', careProtocol: 'Keep people and pets clear of the work area.' },
-    { period: 'After completion', expectedSensations: 'Our team explains what has been completed.', careProtocol: 'Follow any roof maintenance guidance provided by the team.' },
+    { period: 'Antes do serviço', expectedSensations: 'A equipe avalia o telhado e combina o escopo com você.', careProtocol: 'Envie fotos e conte quando o problema acontece.' },
+    { period: 'Durante o serviço', expectedSensations: 'O prazo depende do acesso, dos materiais e do trabalho necessário.', careProtocol: 'Mantenha pessoas e animais afastados da área de trabalho.' },
+    { period: 'Após a conclusão', expectedSensations: 'A equipe explica o que foi realizado.', careProtocol: 'Siga as orientações de manutenção fornecidas pela equipe.' },
   ],
   costTransparency: {
-    baseRange: 'Request a quote after an assessment.',
-    factors: ['Roof type and condition', 'Roof access and height', 'Materials and extent of work'],
-    whatIsIncluded: ['Agreed scope of work', 'Description of planned materials', 'Guidance on the completed work'],
-    note: 'Pricing, timings and availability are confirmed by the team after assessment.',
+    baseRange: 'Solicite um orçamento após a avaliação.',
+    factors: ['Tipo e condição do telhado', 'Acesso e altura', 'Materiais e extensão do serviço'],
+    whatIsIncluded: ['Escopo combinado', 'Descrição dos materiais previstos', 'Orientações sobre o serviço concluído'],
+    note: 'Valores, prazos e disponibilidade são confirmados pela equipe após a avaliação.',
   },
   beforeAfterCase: {
     category: name,
-    clinicalContext: 'Examples of roofing work from the CJ Roofing photo gallery.',
+    clinicalContext: 'Fotos de serviços de telhados realizados pela Nobre Telhados Go.',
     beforeLabel: 'Roofing project',
     afterLabel: 'Roofing project',
     beforeImage: projectPhotos[photoIndex % projectPhotos.length],
@@ -179,57 +193,75 @@ const makeService = (
     timeframe: 'Project photos',
   },
   assignedDentistId: 'roofing-team',
-  faqs,
+  faqs: [
+    ...faqs,
+    {
+      question: `Como é definido o serviço de ${name.toLowerCase()}?`,
+      answer: 'A equipe considera os sinais observados, o tipo e as condições do telhado, o acesso e o escopo necessário. As opções são explicadas antes de iniciar o trabalho.',
+    },
+    {
+      question: 'O orçamento pode ser informado antes da avaliação?',
+      answer: 'O valor depende das condições do telhado, do acesso e da extensão do serviço. A equipe confirma o orçamento após entender o escopo necessário.',
+    },
+    {
+      question: 'O que devo informar ao pedir uma avaliação?',
+      answer: 'Conte quando o problema aparece, quais áreas parecem afetadas e se já houve algum reparo. Fotos feitas de um local seguro também podem ajudar.',
+    },
+    {
+      question: 'Preciso subir no telhado para mostrar o problema?',
+      answer: 'Não. Evite subir no telhado. Descreva o que consegue observar do chão ou de dentro do imóvel e combine com a equipe uma forma segura de avaliar o local.',
+    },
+  ],
 });
 
 export const SERVICES: ServiceDetail[] = [
   makeService(
-    'dental-implants', 'Roof Repairs and Leak Detection', 'Roof Repairs',
-    'Find the source of a leak and arrange a repair to help protect your home.',
-    'A ceiling stain or leak can have several causes. An assessment of the roof helps locate water entry points and identify suitable repairs.',
-    ['Leaks during rain', 'Damp patches on ceilings', 'Loose or broken roof tiles'],
-    ['Inspect visible sources of water entry', 'Assess tiles, joins and roof finishes', 'Agree the repair scope before work begins'],
-    [{ question: 'How can you find the source of a roof leak?', answer: 'The source may not be directly above an indoor stain. An inspection of the roof and its joins can help identify where water is entering.' }], 0,
+    'roof-repairs', 'Reparos de telhados', 'Reparos de telhados',
+    'Reparos para telhas danificadas, infiltrações e outros pontos do telhado.',
+    'A equipe avalia telhas, junções e acabamentos para identificar pontos que precisam de reparo.',
+    ['Infiltrações durante a chuva', 'Manchas de umidade no teto', 'Telhas soltas ou quebradas'],
+    ['Avaliar a origem aparente da infiltração', 'Verificar telhas e junções', 'Combinar o escopo do reparo antes do início'],
+    [{ question: 'Como encontrar a origem de uma infiltração?', answer: 'A origem pode não estar diretamente acima da mancha interna. Uma avaliação do telhado e das junções ajuda a identificar por onde a água pode estar entrando.' }], 0,
   ),
   makeService(
-    'root-canal', 'Gutter and Fascia Repairs', 'Gutters and Fascias',
-    'Keep gutters, fascias and roof edges in good condition.',
-    'Gutters and fascias help manage rainwater and protect roof edges. Blockages, loose sections or worn seals can affect drainage and contribute to leaks.',
-    ['Blocked or overflowing gutters', 'Loose or damaged fascias', 'Water collecting near walls or eaves'],
-    ['Check water flow and visible damage', 'Identify joins that may need sealing', 'Plan cleaning or repairs for the roofline'],
-    [{ question: 'How often should gutters be checked?', answer: 'It depends on nearby trees, rainfall and the property. Regular checks can help spot blockages and visible damage.' }], 3,
+    'gutter-cleaning', 'Limpeza de calhas', 'Limpeza de calhas',
+    'Limpeza de calhas para remover folhas, sujeira e resíduos acumulados.',
+    'A limpeza ajuda a liberar o fluxo de água e a identificar danos visíveis nas calhas.',
+    ['Calhas obstruídas ou transbordando', 'Resíduos acumulados', 'Água escorrendo perto de paredes e beirais'],
+    ['Verificar o escoamento e danos visíveis', 'Identificar junções que precisam de atenção', 'Planejar a limpeza da linha do telhado'],
+    [{ question: 'Com que frequência devo verificar as calhas?', answer: 'A frequência depende das árvores próximas, das chuvas e do imóvel. Verificações regulares ajudam a identificar obstruções e danos visíveis.' }], 3,
   ),
   makeService(
-    'teeth-whitening', 'Roof Replacement', 'Roof Replacement',
-    'Roof replacement work planned around your home and its existing roof.',
-    'A roof replacement begins with an assessment of the existing roof, materials and access. The team explains the proposed work and timing before getting started.',
-    ['Worn or damaged roof coverings', 'Repeated problems across a roof', 'Planning a full roof renewal'],
-    ['Assess the existing roof and its condition', 'Discuss suitable roof materials and scope', 'Plan replacement work for your property'],
-    [{ question: 'When might a roof need to be replaced?', answer: 'The right option depends on the roof’s condition, age, materials and repair history. An assessment can help clarify whether repair or replacement is suitable.' }], 10,
+    'roof-renovation', 'Reforma de telhados', 'Reforma de telhados',
+    'Reformas de telhados planejadas para as condições do imóvel.',
+    'A avaliação considera as condições do telhado e ajuda a definir o serviço necessário.',
+    ['Cobertura desgastada ou danificada', 'Problemas recorrentes em diferentes pontos', 'Planejamento de uma reforma completa'],
+    ['Avaliar o telhado existente', 'Combinar materiais e escopo adequados', 'Planejar a execução do serviço'],
+    [{ question: 'Quando um telhado pode precisar de reforma?', answer: 'A opção adequada depende das condições, dos materiais e do histórico do telhado. Uma avaliação ajuda a esclarecer se reparos ou uma reforma são indicados.' }], 10,
   ),
   makeService(
-    'dental-cleaning', 'Flat Roof Installation and Repairs', 'Flat Roofs',
-    'Flat roof installation, repairs and maintenance for residential properties.',
-    'Flat roof work depends on the existing surface, drainage and signs of water ingress. Our team assesses the area before recommending materials and preparation.',
-    ['Leaks on flat roofs', 'Visible wear or damage', 'A planned flat roof replacement'],
-    ['Assess the roof surface and drainage', 'Identify joints and areas needing attention', 'Agree the preparation and work scope'],
-    [{ question: 'Can a flat roof leak be repaired?', answer: 'The right approach depends on the roof surface, condition and source of the leak. An inspection helps determine whether a repair or replacement is appropriate.' }], 12,
+    'waterproofing', 'Impermeabilização e infiltrações', 'Infiltrações',
+    'Avaliação de infiltrações e pontos de entrada de água.',
+    'A equipe verifica a superfície, a drenagem e as junções para entender o que precisa de atenção.',
+    ['Infiltrações em coberturas', 'Desgaste ou danos visíveis', 'Pontos de drenagem que precisam de atenção'],
+    ['Avaliar a cobertura e a drenagem', 'Identificar junções que precisam de atenção', 'Combinar a preparação e o escopo do serviço'],
+    [{ question: 'Uma infiltração no telhado pode ser reparada?', answer: 'A solução depende da superfície, das condições e da origem da infiltração. Uma avaliação ajuda a entender se um reparo é adequado.' }], 12,
   ),
   makeService(
-    'braces', 'Roof Inspections and Maintenance', 'Roof Inspections',
-    'Check visible wear and plan maintenance for your roof.',
-    'A roof inspection checks visible tiles, ridges, gutters, flashings and other accessible areas. The team explains any recommended maintenance.',
-    ['A roof without a recent inspection', 'Visible wear or loose roof components', 'Planning seasonal roof maintenance'],
-    ['Record areas that may need attention', 'Prioritise repairs based on the roof condition', 'Plan ongoing roof maintenance'],
-    [{ question: 'Does an inspection require access to the roof?', answer: 'The assessment method depends on the property and safe access. The team will agree a suitable approach before work begins.' }], 1,
+    'roof-cleaning', 'Limpeza de telhados', 'Limpeza de telhados',
+    'Limpeza profissional de telhados e remoção de resíduos.',
+    'O tipo de limpeza é combinado após avaliar o telhado, o acesso e as condições do imóvel.',
+    ['Resíduos acumulados no telhado', 'Desgaste visível ou componentes soltos', 'Manutenção preventiva do telhado'],
+    ['Identificar áreas que precisam de atenção', 'Priorizar os serviços conforme as condições', 'Planejar a manutenção do telhado'],
+    [{ question: 'A avaliação exige acesso ao telhado?', answer: 'A forma de avaliar depende do imóvel e das condições de segurança. A equipe combina uma abordagem adequada antes do serviço.' }], 1,
   ),
   makeService(
-    'cosmetic-dentistry', 'Storm Damage Repairs', 'Storm Damage',
-    'Assess visible roof damage after heavy rain or strong winds.',
-    'Loose tiles, damaged gutters or water ingress after a storm may need attention. An assessment helps document visible damage and agree next steps.',
-    ['Tiles displaced by wind', 'Leaks after heavy rain', 'Loose gutters, flashings or roof finishes'],
-    ['Identify visible storm damage', 'Prioritise areas where water may enter', 'Discuss suitable repair options'],
-    [{ question: 'What should I do if my roof starts leaking during a storm?', answer: 'Move belongings away from the water and collect drips if it is safe. Do not climb onto a wet roof or touch electrical fittings affected by water.' }], 5,
+    'storm-damage', 'Reparo após tempestades', 'Reparo após tempestades',
+    'Avaliação e reparos em telhados após ventos e chuvas fortes.',
+    'A equipe verifica telhas deslocadas, infiltrações e acabamentos que precisam de atenção.',
+    ['Telhas deslocadas pelo vento', 'Infiltrações após chuva forte', 'Calhas ou acabamentos soltos'],
+    ['Identificar danos visíveis', 'Priorizar os pontos de entrada de água', 'Combinar opções de reparo adequadas'],
+    [{ question: 'O que fazer se o telhado começar a vazar durante uma tempestade?', answer: 'Afaste pertences da água e recolha goteiras se for seguro. Não suba em um telhado molhado nem toque em instalações elétricas atingidas pela água.' }], 5,
   ),
 ];
 
@@ -264,35 +296,35 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    slug: 'signs-of-a-roof-leak', title: 'Signs of a roof leak: what to look for', category: 'Roof leaks', readTime: '4 min read', publishDate: '2026-10-08', lastUpdated: '2026-10-08', authorId: 'our-doctor',
-    excerpt: 'Ceiling stains, drips and peeling paint can point to water ingress. Learn what to look for safely.', leadImage: projectPhotos[2], relatedServiceSlug: 'dental-implants',
-    content: { intro: 'A damp patch can appear some distance from where water entered. Notice when it appears and record what you can see from the ground.', sections: [
-      { heading: 'Signs to check', body: 'Drips, bubbling paint, a damp smell and displaced tiles are all reasons to arrange an inspection. They do not show the cause or the amount of repair work needed on their own.' },
-      { heading: 'Stay safe while you wait', body: 'Move furniture and electronics away from water. Do not climb onto the roof, especially when it is wet, and keep away from lights or wiring affected by moisture.' },
-    ], faqs: [{ question: 'Does a ceiling stain show the exact location of a leak?', answer: 'Not always. Water can travel along the roof structure before appearing inside, so the source needs to be assessed.' }] },
+    slug: 'roof-leak-signs', title: 'Como identificar sinais de infiltração no telhado', category: 'Cuidados com o telhado', readTime: '3 min de leitura', publishDate: '2026-10-13', lastUpdated: '2026-10-13', authorId: 'our-doctor',
+    excerpt: 'Manchas no teto e goteiras podem indicar que a cobertura precisa de avaliação.', leadImage: '/images/nobre-roof-02.jpg', relatedServiceSlug: 'roof-repairs',
+    content: { intro: 'Sinais de umidade dentro de casa podem ter diferentes origens. Uma avaliação do telhado ajuda a verificar telhas, junções e outros pontos por onde a água pode entrar.', sections: [
+      { heading: 'Observe os sinais com segurança', body: 'Anote quando a mancha ou goteira aparece e fotografe apenas o que for possível ver do chão ou de dentro do imóvel. Não suba em um telhado molhado.' },
+      { heading: 'Peça uma avaliação', body: 'Compartilhe as informações com a equipe para conversar sobre uma avaliação e os possíveis reparos.' },
+    ], faqs: [{ question: 'A origem da infiltração fica sempre acima da mancha?', answer: 'Não necessariamente. A água pode percorrer a cobertura antes de aparecer no teto. Uma avaliação ajuda a investigar os pontos de entrada.' }] },
   },
   {
-    slug: 'gutter-and-fascia-maintenance', title: 'Gutters and fascias: why maintenance matters', category: 'Maintenance', readTime: '4 min read', publishDate: '2026-10-08', lastUpdated: '2026-10-08', authorId: 'our-doctor',
-    excerpt: 'Blockages and worn seals can affect drainage. Learn when to arrange an inspection.', leadImage: projectPhotos[3], relatedServiceSlug: 'root-canal',
-    content: { intro: 'Gutters and fascias work with the roof to carry water away from walls and eaves. A check can help find visible blockages or wear.', sections: [
-      { heading: 'Look for drainage issues', body: 'Overflowing gutters, standing water or damp marks nearby may need assessment. Leaves and debris can also block water flow.' },
-      { heading: 'Put safety first', body: 'Do not attempt to clean or repair high areas without proper equipment and safe access. Arrange a professional assessment.' },
+    slug: 'gutter-maintenance', title: 'Por que manter as calhas limpas', category: 'Manutenção preventiva', readTime: '3 min de leitura', publishDate: '2026-10-13', lastUpdated: '2026-10-13', authorId: 'our-doctor',
+    excerpt: 'Folhas e resíduos podem bloquear o escoamento. Saiba quando pedir uma limpeza profissional.', leadImage: '/images/nobre-roof-01.jpg', relatedServiceSlug: 'gutter-cleaning',
+    content: { intro: 'Calhas sem manutenção podem acumular folhas e resíduos. A condição das calhas e a necessidade de limpeza variam conforme o imóvel e o entorno.', sections: [
+      { heading: 'Fique atento ao escoamento', body: 'Transbordamento e resíduos visíveis são sinais de que vale solicitar uma avaliação. Evite subir em escadas ou no telhado sem os equipamentos e o treinamento adequados.' },
+      { heading: 'Combine o serviço com segurança', body: 'Converse com a equipe sobre o acesso ao imóvel e as condições das calhas antes de combinar a limpeza.' },
     ] },
   },
   {
-    slug: 'checking-your-roof-after-a-storm', title: 'How to check your roof after a storm', category: 'Storm damage', readTime: '5 min read', publishDate: '2026-10-08', lastUpdated: '2026-10-08', authorId: 'our-doctor',
-    excerpt: 'Learn which signs you can safely record from the ground and when to avoid accessing the roof.', leadImage: projectPhotos[5], relatedServiceSlug: 'cosmetic-dentistry',
-    content: { intro: 'After heavy rain or wind, start by looking at the house from a safe place. Do not climb onto the roof to check loose materials.', sections: [
-      { heading: 'Record visible damage', body: 'From the ground, photograph fallen tiles, displaced gutters or new damp patches. Note when water entered and which rooms were affected.' },
-      { heading: 'When to seek help', body: 'Active leaks, exposed roof areas or water near electrical fittings need attention. Keep clear of unsafe areas and seek professional advice.' },
+    slug: 'when-to-renovate-a-roof', title: 'Quando considerar uma reforma no telhado', category: 'Reformas', readTime: '3 min de leitura', publishDate: '2026-10-13', lastUpdated: '2026-10-13', authorId: 'our-doctor',
+    excerpt: 'Danos recorrentes ou desgaste visível podem justificar uma avaliação da cobertura.', leadImage: '/images/nobre-roof-07.jpg', relatedServiceSlug: 'roof-renovation',
+    content: { intro: 'Telhas desgastadas, peças soltas ou problemas que voltam a aparecer podem indicar a necessidade de avaliar a cobertura. A solução adequada depende do estado e dos materiais do telhado.', sections: [
+      { heading: 'Observe sem se expor a riscos', body: 'Registre danos que consiga ver do chão e evite caminhar sobre as telhas. O acesso seguro deve ser avaliado por profissionais.' },
+      { heading: 'Entenda o escopo antes de começar', body: 'Peça uma avaliação e converse sobre o serviço recomendado, os materiais e o prazo antes de autorizar o trabalho.' },
     ] },
   },
   {
-    slug: 'when-to-replace-roof-tiles', title: 'When replacing roof tiles may be the right choice', category: 'Roof tiles', readTime: '4 min read', publishDate: '2026-10-08', lastUpdated: '2026-10-08', authorId: 'our-doctor',
-    excerpt: 'Broken or displaced tiles can be a reason to assess the roof and the surrounding materials.', leadImage: projectPhotos[10], relatedServiceSlug: 'teeth-whitening',
-    content: { intro: 'Not every issue means replacing the whole roof. An assessment considers the tile type, the condition of nearby materials and the reason for the damage.', sections: [
-      { heading: 'Broken or displaced tiles', body: 'Tiles on the ground, visible gaps or exposed underlay are signs that should be checked by a team with safe access.' },
-      { heading: 'What to consider', body: 'Availability of matching tiles, the roof structure and access all affect the scope and timing of repairs.' },
+    slug: 'storm-damage-safety', title: 'O que fazer após danos causados por tempestade', category: 'Segurança', readTime: '3 min de leitura', publishDate: '2026-10-13', lastUpdated: '2026-10-13', authorId: 'our-doctor',
+    excerpt: 'Cuidados práticos para manter pessoas e bens em segurança enquanto o telhado é avaliado.', leadImage: '/images/nobre-roof-05.jpg', relatedServiceSlug: 'storm-damage',
+    content: { intro: 'Ventos fortes e chuva podem deslocar telhas e deixar partes da cobertura expostas. Priorize a segurança e peça orientação profissional antes de qualquer reparo.', sections: [
+      { heading: 'Mantenha distância de partes soltas', body: 'Afaste pessoas e animais da área afetada. Se for seguro, fotografe os danos visíveis do chão para compartilhar com a equipe.' },
+      { heading: 'Não suba no telhado', body: 'Não tente reparar a cobertura durante a chuva ou em condições inseguras. Combine uma avaliação profissional quando o acesso estiver seguro.' },
     ] },
   },
 ];

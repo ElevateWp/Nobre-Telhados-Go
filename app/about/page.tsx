@@ -9,41 +9,40 @@ import MediaParallax from '@/components/motion/MediaParallax';
 import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import Button from '@/components/ui/Button';
-import DentistCard from '@/components/sections/dentists/DentistCard';
-import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
+import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'About CJ Roofing Services Ltd',
+  title: 'Sobre a Nobre Telhados Go',
   description:
-    'Meet the CJ Roofing Services Ltd team. Our Dublin roofers bring over 10 years of experience to roof replacements and repairs.',
+    'Conheça a Nobre Telhados Go, empresa de serviços para telhados em Goiás.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
-    year: 'Dublin, Ireland',
-    title: 'Roofing Experience You Can Rely On',
-    description: 'Our team brings over 10 years of experience to residential roof replacements across Dublin.',
+    year: 'Goiás, Brasil',
+    title: 'Serviços profissionais para telhados',
+    description: 'A Nobre Telhados Go realiza reformas, reparos e limpeza de telhados e calhas, com atendimento ágil, cordial e pontual.',
   },
 ];
 
 const APPROACH_STEPS = [
   {
-    title: 'Careful Assessment and Planning',
-    description: 'We inspect the roof for visible wear and explain the available repair options.',
+    title: 'Avaliação do telhado',
+    description: 'A equipe avalia o serviço necessário e combina o escopo antes de começar.',
   },
   {
-    title: 'Clear Quotes',
-    description: 'We explain the work scope, materials and timing before the job begins.',
+    title: 'Orçamento claro',
+    description: 'O valor e o prazo são confirmados após a avaliação do telhado.',
   },
   {
-    title: 'Repairs to Suit Your Roof',
-    description: 'Our team considers the roof type and condition when planning suitable repair work.',
+    title: 'Execução cuidadosa',
+    description: 'A equipe realiza o serviço combinado com cuidado pelo imóvel.',
   },
   {
-    title: 'Service Across Dublin',
-    description: 'We work on residential properties across Dublin. Contact us to check availability in your area.',
+    title: 'Em Goiás',
+    description: 'Consulte a equipe para confirmar a disponibilidade de atendimento na sua região.',
   },
 ];
 
@@ -53,17 +52,17 @@ export default function AboutPage() {
       {/* SECTION 1: Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'About Us', path: '/about/' }]} />
+          <Breadcrumbs items={[{ name: 'Sobre nós', path: '/about/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  About CJ Roofing Services Ltd
+                  Sobre a Nobre Telhados Go
                 </span>
-                <WordRevealH1 text="Roofing delivered with care, clarity and a focus on safety." />
+                  <WordRevealH1 text="Reformas e cuidados para o seu telhado." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Our Dublin roofing team brings over 10 years of experience to roof replacements and residential roofing work." />
+                  <ScrubbedParagraph text="A Nobre Telhados Go realiza reformas, reparos e limpeza de telhados e calhas em Goiás." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -72,8 +71,8 @@ export default function AboutPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Roofing Team</span>
-                    <span className="font-medium text-forest">CJ Roofing Services Ltd</span>
+                    <span>Empresa</span>
+                    <span className="font-medium text-forest">Nobre Telhados Go</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -88,10 +87,10 @@ export default function AboutPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-2xl mb-16">
               <span className="font-body text-13 text-paper/60 uppercase tracking-wider block mb-2 font-medium">
-                Our Experience
+                Nossa experiência
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Our Company
+                Nossa empresa
               </h2>
             </div>
           </AnimateOnScroll>
@@ -127,10 +126,10 @@ export default function AboutPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-16">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                How We Work
+                Como trabalhamos
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Our Approach
+                Nosso atendimento
               </h2>
             </div>
           </AnimateOnScroll>
@@ -161,59 +160,63 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Equipe CJ Roofing Services Ltd */}
+      {/* SECTION 4: Product categories */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
               <div>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Our Team
+                  Serviços da Nobre Telhados Go
                 </span>
-                <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Meet the CJ Roofing Team
-                </h2>
+                <h2 className="font-display text-33 md:text-41 text-forest-ink">Conheça nossas opções</h2>
               </div>
               <Link
-                href="/dentists/"
+                href="/contact/"
                 className="font-body text-15 text-forest font-medium hover:underline underline-offset-4"
               >
-                View Team Details →
+                Fale com a equipe →
               </Link>
             </div>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-            {DENTISTS.map((dentist, idx) => (
-              <DentistCard key={dentist.id} dentist={dentist} offsetY={idx === 1} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {SERVICES.slice(0, 3).map((service, idx) => (
+              <AnimateOnScroll key={service.slug} animation="fade-up" delay={idx * 0.1}>
+                <Link href={'/' + service.slug + '/'} className="block h-full border border-mist bg-paper p-7 shadow-sm transition-colors hover:border-brand">
+                  <span className="mb-3 block font-body text-13 font-medium uppercase tracking-wider text-brand">Serviço</span>
+                  <h3 className="mb-3 font-display text-21 text-forest-ink">{service.name}</h3>
+                  <p className="font-body text-15 leading-relaxed text-forest-ink/75">{service.shortDescription}</p>
+                </Link>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 5: Roofing Work */}
+      {/* SECTION 5: Store services */}
       <section className="py-20 md:py-32 border-b border-mist overflow-hidden">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Our Roofing Work
+                  O que fazemos
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Inspections and Repairs, Planned with Care
+                  Serviços para telhados
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                  We take pride in our work and in caring for every property. Our team explains each step and aims to leave every new roof strong and reliable.
+                  Realizamos reformas, reparos e limpeza de telhados e calhas. O escopo é combinado após a avaliação.
                 </p>
                 <div className="space-y-2 font-body text-13 text-forest-ink/70">
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                    <span>Access and safety arrangements are agreed before work begins</span>
+                    <span>Atendimento ágil e cordial</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                    <span>Materials and methods suited to the roof</span>
+                    <span>Orçamento antes de iniciar o serviço</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -224,15 +227,15 @@ export default function AboutPage() {
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.08} className="w-full h-full">
                     <Image
-                      src="/images/roof-saffron-walden-1024x768-1.jpg"
-                      alt="Slate roof installation in progress"
+                      src="/images/nobre-roof-06.jpg"
+                      alt="Loja de serviços para telhados Nobre Telhados Go em Goiás"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
                   <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                    Roof Replacement
+                    Serviço em telhado
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -241,16 +244,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 6: Roofing Projects */}
+      {/* SECTION 6: Store and product gallery */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Project Gallery
+                Galeria de projetos
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Recent Roofing Work
+                Fotos de telhados e serviços
               </h2>
             </div>
           </AnimateOnScroll>
@@ -259,42 +262,42 @@ export default function AboutPage() {
             <AnimateOnScroll animation="zoom-in" delay={0.1}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/roofb3-1.jpg"
-                  alt="Tiled roof and gutter on a brick home"
+                  src="/images/nobre-roof-01.jpg"
+                  alt="Calha e telhado ondulado"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Roof and Gutter Repair
+                  Calhas e telhados
                 </div>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" delay={0.2}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/Michael.jpg"
-                  alt="Roof structure and underlay during replacement"
+                  src="/images/nobre-roof-03.jpg"
+                  alt="Estrutura de telhado em reforma"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Roof Replacement
+                  Reformas e reparos
                 </div>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" delay={0.3}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/m9.jpg"
-                  alt="Roof underlay and battens during installation"
+                  src="/images/nobre-roof-07.jpg"
+                  alt="Telhado residencial de telhas cerâmicas"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Roofing Work in Progress
+                  Telhados cerâmicos
                 </div>
               </div>
             </AnimateOnScroll>
@@ -308,23 +311,23 @@ export default function AboutPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Request a Quote
+                Solicite um orçamento
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Request a roof assessment from our team
+                Fale com a equipe sobre o seu telhado
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
-                Call us to discuss the work you need and check availability across Dublin.
+                Ligue para solicitar uma avaliação e conversar sobre o serviço necessário.
               </p>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <div className="flex flex-wrap items-center gap-4">
-              <Button href="/book-appointment/" variant="lime" size="lg">
-                Request a Quote
+              <Button href="/request-quote/" variant="lime" size="lg">
+                Solicitar orçamento
               </Button>
               <Button href="/contact/" variant="ghost" size="lg" className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10">
-                Contact Us
+                Entre em contato
               </Button>
             </div>
           </AnimateOnScroll>

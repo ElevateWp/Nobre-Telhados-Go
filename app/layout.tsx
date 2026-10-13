@@ -8,22 +8,22 @@ import JsonLd from '@/components/ui/JsonLd';
 import { generateLocalBusinessSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3456'),
+  metadataBase: new URL('https://a-z-weld.vercel.app'),
   title: {
-    default: 'CJ Roofing Services Ltd',
+    default: 'Nobre Telhados Go',
     template: '%s',
   },
   description:
-    'CJ Roofing Services Ltd provides roof replacements, flat roof installation, repairs and gutter services across Dublin. Call +353 1 556 3783.',
+    'Nobre Telhados Go: serviços profissionais de telhados e calhas em Goiás. Reformas, reparos e limpeza com atendimento ágil e cuidadoso.',
   keywords: [
-    'CJ Roofing Services Ltd',
-    'roof replacement Dublin',
-    'roof repairs Dublin',
+    'Nobre Telhados Go',
+    'telhados em Goiás',
+    'reforma e limpeza de telhados',
   ],
-  authors: [{ name: 'CJ Roofing Services Ltd' }],
+  authors: [{ name: 'Nobre Telhados Go' }],
   icons: {
     icon: [
-      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
       { url: '/icon.png', sizes: '192x192', type: 'image/png' },
     ],
     shortcut: [{ url: '/favicon.ico', type: 'image/x-icon' }],
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-IE" className="scroll-smooth">
+    <html lang="pt-BR" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -46,11 +46,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F7F7F7] selection:text-[#1C1A1B]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F5F7FA] selection:text-[#202124]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">
-          Skip to main content
+          Pular para o conteúdo principal
         </a>
         <LenisProvider>
           <Navbar />
